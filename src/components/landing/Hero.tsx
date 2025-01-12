@@ -22,21 +22,21 @@ export const Hero = () => {
         <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto animate-fade-up">
           Let AI handle inbound viewing bookings and buyer outreach
         </p>
-        <div className="flex flex-col md:flex-row gap-4 justify-center mb-8 animate-fade-up">
-          <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg border border-white/20">
+        <div className="flex flex-col items-center gap-4 mb-8 animate-fade-up">
+          <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg border border-white/20 w-64">
             <p className="text-xl font-bold text-white">No missed calls</p>
           </div>
-          <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg border border-white/20">
+          <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg border border-white/20 w-64">
             <p className="text-xl font-bold text-white">More buyers engaged</p>
           </div>
+          <Button 
+            size="lg" 
+            className="bg-secondary hover:bg-secondary/90 text-lg px-8 py-6 w-64 animate-fade-up"
+            onClick={() => window.location.href = "#demo"}
+          >
+            Book a Demo
+          </Button>
         </div>
-        <Button 
-          size="lg" 
-          className="bg-secondary hover:bg-secondary/90 text-lg px-8 py-6 animate-fade-up"
-          onClick={() => window.location.href = "#demo"}
-        >
-          Book a Demo
-        </Button>
       </div>
     </section>
   );
