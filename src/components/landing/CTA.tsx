@@ -13,7 +13,7 @@ export const CTA = () => {
         <Button 
           size="lg" 
           className="bg-secondary hover:bg-secondary/90 text-lg px-8 py-6"
-          onClick={() => window.location.href = "https://calendly.com"}
+          onClick={() => window.location.href = "https://calendar.app.google/9v1Kwgse5ESVHRMC8"}
         >
           Schedule Your Demo
         </Button>

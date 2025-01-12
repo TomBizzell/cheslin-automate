@@ -32,7 +32,7 @@ export const Hero = () => {
           <Button 
             size="lg" 
             className="bg-secondary hover:bg-secondary/90 text-lg px-8 py-6 w-64 animate-fade-up"
-            onClick={() => window.location.href = "#demo"}
+            onClick={() => window.location.href = "https://calendar.app.google/9v1Kwgse5ESVHRMC8"}
           >
             Book a Demo
           </Button>
