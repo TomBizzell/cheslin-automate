@@ -84,7 +84,7 @@ export const Features = () => {
   };
 
   return (
-    <section className="py-24 bg-[#F5F5F5] px-4">
+    <section className="py-24 bg-[#E2E2E2] px-4">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-accent">
           Everything you need to scale your outreach
