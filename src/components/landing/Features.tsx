@@ -25,7 +25,7 @@ const features = [
   {
     title: "Time-Saving",
     description: "Focus on high-value activities while AI handles outreach",
-    bgImage: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=2070&auto=format&fit=crop",
+    bgImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2070&auto=format&fit=crop",
   },
   {
     title: "Never miss a call",
