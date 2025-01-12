@@ -22,15 +22,13 @@ export const Hero = () => {
         <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto animate-fade-up">
           Let AI handle your outreach while you focus on closing deals. Automated calls that sound natural and get results.
         </p>
-        <div className="relative -mb-32">
-          <Button 
-            size="lg" 
-            className="bg-secondary hover:bg-secondary/90 text-lg px-8 py-6 animate-fade-up"
-            onClick={() => window.location.href = "#demo"}
-          >
-            Book a Demo
-          </Button>
-        </div>
+        <Button 
+          size="lg" 
+          className="bg-secondary hover:bg-secondary/90 text-lg px-8 py-6 animate-fade-up"
+          onClick={() => window.location.href = "#demo"}
+        >
+          Book a Demo
+        </Button>
       </div>
     </section>
   );
