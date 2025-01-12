@@ -89,12 +89,12 @@ export const Features = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-accent">
           Everything you need to scale your outreach
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
           {features.map((feature) => (
             <div 
               key={feature.title} 
               className={`relative overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow ${
-                feature.hasInput ? 'row-span-2 bg-muted/20' : 'h-[300px]'
+                feature.hasInput ? 'md:col-span-2 lg:col-span-4 bg-muted/20' : 'aspect-[4/3] md:aspect-square'
               }`}
               style={feature.bgImage ? {
                 backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url(${feature.bgImage})`,
@@ -102,15 +102,15 @@ export const Features = () => {
                 backgroundPosition: 'center',
               } : {}}
             >
-              <div className={`p-6 ${!feature.hasInput ? 'absolute bottom-0 left-0 right-0 text-white' : ''}`}>
-                <h3 className={`text-xl font-semibold mb-2 ${!feature.hasInput ? 'text-white' : 'text-primary'}`}>
+              <div className={`p-6 ${!feature.hasInput ? 'absolute inset-0 flex flex-col justify-end' : ''}`}>
+                <h3 className={`text-xl md:text-2xl font-semibold mb-2 ${!feature.hasInput ? 'text-white' : 'text-primary'}`}>
                   {feature.title}
                 </h3>
                 <p className={`mb-4 ${!feature.hasInput ? 'text-white/90' : 'text-primary/80'}`}>
                   {feature.description}
                 </p>
                 {feature.hasInput && (
-                  <div className="space-y-4 mt-4">
+                  <div className="space-y-4 mt-4 max-w-md mx-auto">
                     <p className="text-sm font-medium text-primary">Speak to Cheslin yourself</p>
                     <Input 
                       type="tel" 
