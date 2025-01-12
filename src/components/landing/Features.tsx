@@ -1,4 +1,4 @@
-import { Phone, Calendar, ChartBar, Clock } from "lucide-react";
+import { Phone, Calendar, ChartBar, Clock, PhoneIncoming } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
@@ -23,6 +23,11 @@ const features = [
     icon: Clock,
     title: "Time-Saving",
     description: "Focus on high-value activities while AI handles outreach",
+  },
+  {
+    icon: PhoneIncoming,
+    title: "Never miss a call",
+    description: "Let AI manage your inbound calls when you're not available",
   },
 ];
 
