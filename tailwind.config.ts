@@ -18,6 +18,11 @@ export default {
       },
     },
     extend: {
+      borderRadius: {
+        lg: "1rem",     // Increased from 0.75rem
+        md: "0.75rem",  // Increased from 0.5rem
+        sm: "0.5rem",   // Increased from 0.25rem
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
