@@ -114,7 +114,7 @@ export const Features = () => {
                     <p className="text-sm font-medium text-primary">Speak to Cheslin yourself</p>
                     <Input 
                       type="tel" 
-                      placeholder="Enter your Phone number e.g. +447778885362"
+                      placeholder="Enter your phone number (e.g. +447778885362)"
                       className="w-full"
                       value={phoneNumber}
                       onChange={(e) => setPhoneNumber(e.target.value)}
