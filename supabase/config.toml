@@ -1,1 +1,10 @@
 project_id = "twznrtbvykvtumfapvsk"
+
+[api]
+enabled = true
+[api.cors]
+enabled = true
+
+[[functions]]
+name = "initiate-call"
+verify_jwt = false

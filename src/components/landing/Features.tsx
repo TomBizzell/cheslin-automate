@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const features = [
   {
@@ -50,29 +51,18 @@ export const Features = () => {
 
     setIsLoading(true);
     try {
-      const response = await fetch("https://us.api.bland.ai/v1/calls", {
-        method: "POST",
-        headers: {
-          "Authorization": "org_9f11dcaa4abcdf524979dd18ffbd55d11c0267c7e9f8ac1850ac4fafa1abc0e9b53d967a2ecf9d8d884969",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          phone_number: phoneNumber,
-          voice: "maya",
-          wait_for_greeting: true,
-          task: "You are Cheslin, a real estate agent AI who can call buyers, tell them about relevant new properties on the market and field inbound calls. You can even book viewings and query a real estate agency's viewing schedule in real time. You help agencies engage more buyers and miss no calls. Introduce yourself and answer any questions. If you don't know the answer (it's not included in this prompt, you should let them know that they should book a demo to get all the details."
-        }),
+      const { data, error } = await supabase.functions.invoke('initiate-call', {
+        body: { phone_number: phoneNumber }
       });
 
-      if (!response.ok) {
-        throw new Error("Failed to initiate call");
-      }
+      if (error) throw error;
 
       toast({
         title: "Call initiated!",
         description: "You will receive a call from Cheslin shortly.",
       });
     } catch (error) {
+      console.error('Error initiating call:', error);
       toast({
         variant: "destructive",
         title: "Failed to initiate call",
