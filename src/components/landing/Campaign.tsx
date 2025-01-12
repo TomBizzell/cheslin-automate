@@ -12,8 +12,8 @@ export const Campaign = () => {
         </div>
         <div className="rounded-lg shadow-xl overflow-hidden">
           <img 
-            src="/lovable-uploads/a25dbfd3-11c7-45bf-81db-687cf8cc5864.png"
-            alt="Campaign Creation"
+            src="/lovable-uploads/671dbf41-f435-4611-b271-d681c07b83fd.png"
+            alt="Campaign Creation Interface"
             className="w-full"
           />
         </div>
