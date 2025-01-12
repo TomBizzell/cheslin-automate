@@ -52,7 +52,10 @@ export const Features = () => {
     setIsLoading(true);
     try {
       const { data, error } = await supabase.functions.invoke('initiate-call', {
-        body: { phone_number: phoneNumber }
+        body: { 
+          phone_number: phoneNumber,
+          first_sentence: "Hi there! My name is Cheslin, I'm an AI that can make and receive calls on your behalf. I can share details about your new property listings and even book viewings during the call. Let me know if you have any questions about me. Otherwise, you can book a Demo to see all of the things I can do for you."
+        }
       });
 
       if (error) throw error;
