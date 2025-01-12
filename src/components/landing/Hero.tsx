@@ -20,7 +20,8 @@ export const Hero = () => {
           Engage buyers and fill viewings on autopilot
         </h1>
         <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto animate-fade-up">
-          Let AI handle inbound viewing bookings and buyer outreach. No missed calls. More buyers engaged.
+          Let AI handle inbound viewing bookings and buyer outreach.<br />
+          No missed calls. More buyers engaged.
         </p>
         <Button 
           size="lg" 
