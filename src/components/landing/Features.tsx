@@ -25,17 +25,17 @@ const features = [
 
 export const Features = () => {
   return (
-    <section className="py-24 bg-muted px-4">
+    <section className="py-24 bg-white px-4">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-primary">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-accent">
           Everything you need to scale your outreach
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature) => (
-            <div key={feature.title} className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <feature.icon className="w-12 h-12 text-accent mb-4" />
+            <div key={feature.title} className="bg-muted/20 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <feature.icon className="w-12 h-12 text-secondary mb-4" />
               <h3 className="text-xl font-semibold mb-2 text-primary">{feature.title}</h3>
-              <p className="text-secondary">{feature.description}</p>
+              <p className="text-primary/80">{feature.description}</p>
             </div>
           ))}
         </div>
