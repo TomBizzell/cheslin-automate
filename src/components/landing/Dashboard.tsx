@@ -12,8 +12,8 @@ export const Dashboard = () => {
         </div>
         <div className="rounded-lg shadow-xl overflow-hidden">
           <img 
-            src="/lovable-uploads/51f59181-89ea-4e40-8bc2-939a608f63cd.png"
-            alt="Cheslin Dashboard"
+            src="/lovable-uploads/d04798f9-6384-41ef-b94d-e00d471a2d84.png"
+            alt="Cheslin Dashboard Interface"
             className="w-full"
           />
         </div>
