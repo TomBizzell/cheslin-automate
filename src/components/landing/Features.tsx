@@ -1,6 +1,8 @@
 import { Phone, Calendar, ChartBar, Clock, PhoneIncoming } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { useToast } from "@/components/ui/use-toast";
 
 const features = [
   {
@@ -32,6 +34,53 @@ const features = [
 ];
 
 export const Features = () => {
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const { toast } = useToast();
+
+  const handleCallRequest = async () => {
+    if (!phoneNumber) {
+      toast({
+        variant: "destructive",
+        title: "Please enter a phone number",
+        description: "A valid phone number is required to receive a call.",
+      });
+      return;
+    }
+
+    setIsLoading(true);
+    try {
+      const response = await fetch("https://us.api.bland.ai/v1/calls", {
+        method: "POST",
+        headers: {
+          "Authorization": "org_9f11dcaa4abcdf524979dd18ffbd55d11c0267c7e9f8ac1850ac4fafa1abc0e9b53d967a2ecf9d8d884969",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          phone_number: phoneNumber,
+          task: "You are Cheslin, a real estate agent AI who can call buyers, tell them about relevant new properties on the market and field inbound calls. You can even book viewings and query a real estate agency's viewing schedule in real time. You help agencies engage more buyers and miss no calls. Introduce yourself and answer any questions. If you don't know the answer (it's not included in this prompt, you should let them know that they should book a demo to get all the details."
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to initiate call");
+      }
+
+      toast({
+        title: "Call initiated!",
+        description: "You will receive a call from Cheslin shortly.",
+      });
+    } catch (error) {
+      toast({
+        variant: "destructive",
+        title: "Failed to initiate call",
+        description: "There was an error initiating your call. Please try again.",
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <section className="py-24 bg-[#F5F5F5] px-4">
       <div className="max-w-6xl mx-auto">
@@ -56,9 +105,15 @@ export const Features = () => {
                     type="tel" 
                     placeholder="Enter your Phone number e.g. +447778885362"
                     className="w-full"
+                    value={phoneNumber}
+                    onChange={(e) => setPhoneNumber(e.target.value)}
                   />
-                  <Button className="w-full">
-                    Receive a call from Cheslin
+                  <Button 
+                    className="w-full"
+                    onClick={handleCallRequest}
+                    disabled={isLoading}
+                  >
+                    {isLoading ? "Initiating call..." : "Receive a call from Cheslin"}
                   </Button>
                 </div>
               )}
