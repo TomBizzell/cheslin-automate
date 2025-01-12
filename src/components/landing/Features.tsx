@@ -20,12 +20,12 @@ const features = [
   {
     title: "Performance Tracking",
     description: "Monitor campaign success with detailed analytics",
-    bgImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+    bgImage: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2070&auto=format&fit=crop",
   },
   {
     title: "Time-Saving",
     description: "Focus on high-value activities while AI handles outreach",
-    bgImage: "https://images.unsplash.com/photo-1495364141860-b0d03eccd065?q=80&w=1776&auto=format&fit=crop",
+    bgImage: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=2070&auto=format&fit=crop",
   },
   {
     title: "Never miss a call",
