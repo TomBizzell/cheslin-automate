@@ -1,4 +1,4 @@
-import { Phone, Calendar, ChartBar, Clock, PhoneIncoming } from "lucide-react";
+import { Phone } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
@@ -6,30 +6,30 @@ import { useToast } from "@/components/ui/use-toast";
 
 const features = [
   {
-    icon: Phone,
     title: "AI-Powered Calls",
     description: "Natural-sounding AI calls that engage potential buyers effectively",
     hasInput: true,
+    bgImage: null,
   },
   {
-    icon: Calendar,
     title: "Automated Scheduling",
     description: "Fill your viewing calendar without lifting a finger",
+    bgImage: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=2068&auto=format&fit=crop",
   },
   {
-    icon: ChartBar,
     title: "Performance Tracking",
     description: "Monitor campaign success with detailed analytics",
+    bgImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
   },
   {
-    icon: Clock,
     title: "Time-Saving",
     description: "Focus on high-value activities while AI handles outreach",
+    bgImage: "https://images.unsplash.com/photo-1495364141860-b0d03eccd065?q=80&w=1776&auto=format&fit=crop",
   },
   {
-    icon: PhoneIncoming,
     title: "Never miss a call",
     description: "Let AI manage your inbound calls when you're not available",
+    bgImage: "https://images.unsplash.com/photo-1534536281715-e28d76689b4d?q=80&w=2070&auto=format&fit=crop",
   },
 ];
 
@@ -84,7 +84,7 @@ export const Features = () => {
   };
 
   return (
-    <section className="py-24 bg-[#F5F5F5] px-4">
+    <section className="py-24 bg-[#E2E2E2] px-4">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-accent">
           Everything you need to scale your outreach
@@ -93,32 +93,42 @@ export const Features = () => {
           {features.map((feature) => (
             <div 
               key={feature.title} 
-              className={`bg-muted/20 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow ${
-                feature.hasInput ? 'row-span-2' : ''
+              className={`relative overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow ${
+                feature.hasInput ? 'row-span-2 bg-muted/20' : 'h-[300px]'
               }`}
+              style={feature.bgImage ? {
+                backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url(${feature.bgImage})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              } : {}}
             >
-              <feature.icon className="w-12 h-12 text-secondary mb-4" />
-              <h3 className="text-xl font-semibold mb-2 text-primary">{feature.title}</h3>
-              <p className="text-primary/80 mb-4">{feature.description}</p>
-              {feature.hasInput && (
-                <div className="space-y-4 mt-4">
-                  <p className="text-sm font-medium text-primary">Speak to Cheslin yourself</p>
-                  <Input 
-                    type="tel" 
-                    placeholder="Enter your Phone number e.g. +447778885362"
-                    className="w-full"
-                    value={phoneNumber}
-                    onChange={(e) => setPhoneNumber(e.target.value)}
-                  />
-                  <Button 
-                    className="w-full"
-                    onClick={handleCallRequest}
-                    disabled={isLoading}
-                  >
-                    {isLoading ? "Initiating call..." : "Receive a call from Cheslin"}
-                  </Button>
-                </div>
-              )}
+              <div className={`p-6 ${!feature.hasInput ? 'absolute bottom-0 left-0 right-0 text-white' : ''}`}>
+                <h3 className={`text-xl font-semibold mb-2 ${!feature.hasInput ? 'text-white' : 'text-primary'}`}>
+                  {feature.title}
+                </h3>
+                <p className={`mb-4 ${!feature.hasInput ? 'text-white/90' : 'text-primary/80'}`}>
+                  {feature.description}
+                </p>
+                {feature.hasInput && (
+                  <div className="space-y-4 mt-4">
+                    <p className="text-sm font-medium text-primary">Speak to Cheslin yourself</p>
+                    <Input 
+                      type="tel" 
+                      placeholder="Enter your Phone number e.g. +447778885362"
+                      className="w-full"
+                      value={phoneNumber}
+                      onChange={(e) => setPhoneNumber(e.target.value)}
+                    />
+                    <Button 
+                      className="w-full"
+                      onClick={handleCallRequest}
+                      disabled={isLoading}
+                    >
+                      {isLoading ? "Initiating call..." : "Receive a call from Cheslin"}
+                    </Button>
+                  </div>
+                )}
+              </div>
             </div>
           ))}
         </div>
