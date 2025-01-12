@@ -25,11 +25,11 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#1E293B",
+          DEFAULT: "#2E4756", // Dark blue for primary actions
           foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#64748B",
+          DEFAULT: "#3C7A89", // Lighter blue for secondary elements
           foreground: "#FFFFFF",
         },
         destructive: {
@@ -37,11 +37,11 @@ export default {
           foreground: "hsl(var(--destructive-foreground))",
         },
         muted: {
-          DEFAULT: "#F1F5F9",
-          foreground: "#64748B",
+          DEFAULT: "#BABD8D", // Light sage for muted backgrounds
+          foreground: "#2E4756",
         },
         accent: {
-          DEFAULT: "#3B82F6",
+          DEFAULT: "#7C6A0A", // Olive green for accents
           foreground: "#FFFFFF",
         },
       },
