@@ -1,10 +1,13 @@
 import { Phone, Calendar, ChartBar, Clock } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
 const features = [
   {
     icon: Phone,
     title: "AI-Powered Calls",
     description: "Natural-sounding AI calls that engage potential buyers effectively",
+    hasInput: true,
   },
   {
     icon: Calendar,
@@ -32,10 +35,28 @@ export const Features = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature) => (
-            <div key={feature.title} className="bg-muted/20 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <div 
+              key={feature.title} 
+              className={`bg-muted/20 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow ${
+                feature.hasInput ? 'row-span-2' : ''
+              }`}
+            >
               <feature.icon className="w-12 h-12 text-secondary mb-4" />
               <h3 className="text-xl font-semibold mb-2 text-primary">{feature.title}</h3>
-              <p className="text-primary/80">{feature.description}</p>
+              <p className="text-primary/80 mb-4">{feature.description}</p>
+              {feature.hasInput && (
+                <div className="space-y-4 mt-4">
+                  <p className="text-sm font-medium text-primary">Speak to Cheslin yourself</p>
+                  <Input 
+                    type="tel" 
+                    placeholder="Enter your Phone number e.g. +447778885362"
+                    className="w-full"
+                  />
+                  <Button className="w-full">
+                    Receive a call from Cheslin
+                  </Button>
+                </div>
+              )}
             </div>
           ))}
         </div>
