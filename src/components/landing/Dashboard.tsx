@@ -7,8 +7,6 @@ export const Dashboard = () => {
             <iframe 
               src="https://www.loom.com/embed/f5bf8ceadd014a099dddc13e24607ec2?sid=d22b4e52-bc56-4bc1-9e5e-a3a8d286781b" 
               frameBorder="0" 
-              webkitallowfullscreen 
-              mozallowfullscreen 
               allowFullScreen 
               style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
             />
