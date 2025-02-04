@@ -17,7 +17,7 @@ export const Hero = () => {
       {/* Content overlay */}
       <div className="relative z-10 max-w-6xl mx-auto text-center text-white px-4">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-up">
-          Engage buyers and fill viewings on autopilot
+          Let Cheslin transform your real estate rental strategy
         </h1>
         <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto animate-fade-up">
           Let AI handle inbound viewing bookings and buyer outreach
