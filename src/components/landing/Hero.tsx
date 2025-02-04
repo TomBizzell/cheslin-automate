@@ -20,7 +20,7 @@ export const Hero = () => {
           Let Cheslin transform your real estate rental strategy
         </h1>
         <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto animate-fade-up">
-          Let AI handle inbound viewing bookings and buyer outreach
+          Automate outbound calls, streamline call-out lists, and book more viewings effortlessly with lifelike AI
         </p>
         <div className="flex flex-col items-center gap-4 mb-8 animate-fade-up">
           <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg border border-white/20 w-64">
