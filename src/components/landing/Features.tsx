@@ -13,23 +13,23 @@ const features = [
     bgImage: null,
   },
   {
-    title: "Automated Scheduling",
-    description: "Fill your viewing calendar without lifting a finger",
+    title: "Automated Calls",
+    description: "Cheslin calls hundreds of leads simultaneously, books viewings based on responses, and automatically updates your calendar with confirmed appointments",
     bgImage: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=2068&auto=format&fit=crop",
   },
   {
-    title: "Performance Tracking",
-    description: "Monitor campaign success with detailed analytics",
+    title: "Automated Call-Out Lists",
+    description: "Cheslin matches clients with suitable properties and creates optimised call-out lists, eliminating the need for manual effort",
     bgImage: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2070&auto=format&fit=crop",
   },
   {
-    title: "Time-Saving",
-    description: "Focus on high-value activities while AI handles outreach",
+    title: "Lead Management",
+    description: "Cheslin tracks and organises all your leads in a centralised dashboard, giving you clear oversight and progress updates",
     bgImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2070&auto=format&fit=crop",
   },
   {
-    title: "Never miss a call",
-    description: "Let AI manage your inbound calls when you're not available",
+    title: "Performance Analytics",
+    description: "Cheslin monitors call outcomes, client engagement, and individual agent KPIs like closed transactions and gross commission income to help improve performance",
     bgImage: "https://images.unsplash.com/photo-1534536281715-e28d76689b4d?q=80&w=2070&auto=format&fit=crop",
   },
 ];
