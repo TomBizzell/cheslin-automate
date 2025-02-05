@@ -75,34 +75,34 @@ export const Hero = () => {
           <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg border border-white/20 w-64">
             <p className="text-xl font-bold text-white">More buyers engaged</p>
           </div>
-          <Button 
-            size="lg" 
-            className="bg-secondary hover:bg-secondary/90 text-lg px-8 py-6 w-64 animate-fade-up"
-            onClick={() => window.location.href = "https://calendar.app.google/9v1Kwgse5ESVHRMC8"}
-          >
-            Book a Demo
-          </Button>
+          
+          {/* Waitlist Form */}
+          <form onSubmit={handleWaitlistSubmit} className="w-full max-w-md space-y-4 animate-fade-up">
+            <div className="flex gap-2">
+              <Input
+                type="email"
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="bg-white/10 backdrop-blur-sm border-white/20 text-white placeholder:text-white/60"
+              />
+              <Button 
+                type="submit" 
+                disabled={isLoading}
+                className="bg-secondary hover:bg-secondary/90 whitespace-nowrap"
+              >
+                {isLoading ? "Joining..." : "Join Waitlist"}
+              </Button>
+              <Button 
+                size="lg" 
+                className="bg-secondary hover:bg-secondary/90 text-lg whitespace-nowrap"
+                onClick={() => window.location.href = "https://calendar.app.google/9v1Kwgse5ESVHRMC8"}
+              >
+                Book a Demo
+              </Button>
+            </div>
+          </form>
         </div>
-        
-        {/* Waitlist Form */}
-        <form onSubmit={handleWaitlistSubmit} className="max-w-md mx-auto space-y-4 animate-fade-up">
-          <div className="flex gap-2">
-            <Input
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="bg-white/10 backdrop-blur-sm border-white/20 text-white placeholder:text-white/60"
-            />
-            <Button 
-              type="submit" 
-              disabled={isLoading}
-              className="bg-secondary hover:bg-secondary/90 whitespace-nowrap"
-            >
-              {isLoading ? "Joining..." : "Join Waitlist"}
-            </Button>
-          </div>
-        </form>
       </div>
     </section>
   );
