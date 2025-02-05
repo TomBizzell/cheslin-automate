@@ -48,7 +48,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative px-4 py-12 md:py-0 bg-gradient-to-b from-background to-muted">
+    <section className="min-h-screen flex items-center justify-center relative px-4 py-12 md:py-0 bg-[#ffffff]">
       <div className="relative z-10 max-w-6xl mx-auto text-center">
         <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 animate-fade-up px-4 text-foreground">
           Let Cheslin Transform Your Real Estate Rental Strategy
