@@ -77,32 +77,30 @@ export const Hero = () => {
           </div>
           
           {/* Waitlist Form */}
-          <form onSubmit={handleWaitlistSubmit} className="w-full max-w-2xl space-y-4 animate-fade-up">
-            <div className="flex gap-4 justify-center">
-              <Input
-                type="email"
-                placeholder="Enter your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="bg-white/10 backdrop-blur-sm border-white/20 text-white placeholder:text-white/60 max-w-md"
-              />
-              <div className="flex gap-4">
-                <Button 
-                  type="submit" 
-                  disabled={isLoading}
-                  size="lg"
-                  className="bg-secondary hover:bg-secondary/90 text-lg px-8"
-                >
-                  {isLoading ? "Joining..." : "Join Waitlist"}
-                </Button>
-                <Button 
-                  size="lg" 
-                  className="bg-secondary hover:bg-secondary/90 text-lg px-8"
-                  onClick={() => window.location.href = "https://calendar.app.google/9v1Kwgse5ESVHRMC8"}
-                >
-                  Book a Demo
-                </Button>
-              </div>
+          <form onSubmit={handleWaitlistSubmit} className="w-full max-w-md space-y-4 animate-fade-up">
+            <Input
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="bg-white/10 backdrop-blur-sm border-white/20 text-white placeholder:text-white/60"
+            />
+            <div className="flex justify-center gap-4 flex-wrap">
+              <Button 
+                type="submit" 
+                disabled={isLoading}
+                size="lg"
+                className="bg-secondary hover:bg-secondary/90 text-lg px-8 min-w-[200px]"
+              >
+                {isLoading ? "Joining..." : "Join Waitlist"}
+              </Button>
+              <Button 
+                size="lg" 
+                className="bg-secondary hover:bg-secondary/90 text-lg px-8 min-w-[200px]"
+                onClick={() => window.location.href = "https://calendar.app.google/9v1Kwgse5ESVHRMC8"}
+              >
+                Book a Demo
+              </Button>
             </div>
           </form>
         </div>
