@@ -1,6 +1,52 @@
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { useState } from "react";
+import { useToast } from "@/components/ui/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 export const Hero = () => {
+  const [email, setEmail] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const { toast } = useToast();
+
+  const handleWaitlistSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) {
+      toast({
+        variant: "destructive",
+        title: "Please enter your email",
+        description: "An email address is required to join the waitlist.",
+      });
+      return;
+    }
+
+    setIsLoading(true);
+    try {
+      const { error } = await supabase
+        .from('waitlist')
+        .insert([{ email }]);
+
+      if (error) throw error;
+
+      toast({
+        title: "Success!",
+        description: "You've been added to our waitlist. We'll be in touch soon!",
+      });
+      setEmail("");
+    } catch (error: any) {
+      console.error('Error:', error);
+      toast({
+        variant: "destructive",
+        title: "Failed to join waitlist",
+        description: error.message === "duplicate key value violates unique constraint \"waitlist_email_key\""
+          ? "This email is already on our waitlist."
+          : "There was an error joining the waitlist. Please try again.",
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <section className="min-h-screen flex items-center justify-center relative">
       {/* Background image */}
@@ -37,6 +83,26 @@ export const Hero = () => {
             Book a Demo
           </Button>
         </div>
+        
+        {/* Waitlist Form */}
+        <form onSubmit={handleWaitlistSubmit} className="max-w-md mx-auto space-y-4 animate-fade-up">
+          <div className="flex gap-2">
+            <Input
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="bg-white/10 backdrop-blur-sm border-white/20 text-white placeholder:text-white/60"
+            />
+            <Button 
+              type="submit" 
+              disabled={isLoading}
+              className="bg-secondary hover:bg-secondary/90 whitespace-nowrap"
+            >
+              {isLoading ? "Joining..." : "Join Waitlist"}
+            </Button>
+          </div>
+        </form>
       </div>
     </section>
   );
