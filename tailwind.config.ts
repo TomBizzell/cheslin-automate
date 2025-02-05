@@ -30,7 +30,7 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#0EA5E9", // Ocean Blue for primary actions
+          DEFAULT: "#0a21a6", // New deep blue for primary actions
           foreground: "#FFFFFF",
         },
         secondary: {
