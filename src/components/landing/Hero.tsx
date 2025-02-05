@@ -77,13 +77,13 @@ export const Hero = () => {
           </div>
           
           {/* Waitlist Form */}
-          <form onSubmit={handleWaitlistSubmit} className="w-full max-w-md space-y-4 animate-fade-up">
+          <form onSubmit={handleWaitlistSubmit} className="w-full flex flex-col items-center space-y-4 animate-fade-up">
             <Input
               type="email"
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="bg-white/10 backdrop-blur-sm border-white/20 text-white placeholder:text-white/60"
+              className="bg-white/10 backdrop-blur-sm border-white/20 text-white placeholder:text-white/60 w-64"
             />
             <div className="flex justify-center gap-4 flex-wrap">
               <Button 
