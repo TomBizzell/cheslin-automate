@@ -48,35 +48,22 @@ export const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative px-4 py-12 md:py-0">
-      {/* Background image */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: "url('/lovable-uploads/f5cec3bb-b808-4420-b475-6ae2edce97a1.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          filter: "brightness(0.7)"
-        }}
-      />
-      
-      {/* Content overlay */}
-      <div className="relative z-10 max-w-6xl mx-auto text-center text-white">
-        <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 animate-fade-up px-4">
+    <section className="min-h-screen flex items-center justify-center relative px-4 py-12 md:py-0 bg-gradient-to-b from-background to-muted">
+      <div className="relative z-10 max-w-6xl mx-auto text-center">
+        <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 animate-fade-up px-4 text-foreground">
           Let Cheslin transform your real estate rental strategy
         </h1>
-        <p className="text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 text-white/90 max-w-3xl mx-auto animate-fade-up px-4">
+        <p className="text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 text-foreground/80 max-w-3xl mx-auto animate-fade-up px-4">
           Automate outbound calls, streamline call-out lists, and book more viewings effortlessly with lifelike AI
         </p>
         <div className="flex flex-col items-center gap-4 mb-8 animate-fade-up px-4">
-          <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg border border-white/20 w-full md:w-96">
-            <p className="text-lg md:text-xl font-bold text-white">No missed calls</p>
+          <div className="bg-primary/5 backdrop-blur-sm px-6 py-3 rounded-lg border border-primary/10 w-full md:w-96">
+            <p className="text-lg md:text-xl font-bold text-primary">No missed calls</p>
           </div>
-          <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg border border-white/20 w-full md:w-96">
-            <p className="text-lg md:text-xl font-bold text-white">More buyers engaged</p>
+          <div className="bg-primary/5 backdrop-blur-sm px-6 py-3 rounded-lg border border-primary/10 w-full md:w-96">
+            <p className="text-lg md:text-xl font-bold text-primary">More buyers engaged</p>
           </div>
           
-          {/* Waitlist Form */}
           <form onSubmit={handleWaitlistSubmit} className="w-full max-w-[384px] flex flex-col items-center space-y-4 animate-fade-up">
             <div className="flex flex-col md:flex-row items-center gap-2 w-full">
               <Input
@@ -84,7 +71,7 @@ export const Hero = () => {
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="bg-white/10 backdrop-blur-sm border-white/20 text-white placeholder:text-white/60 w-full"
+                className="bg-white/50 border-primary/20 text-foreground placeholder:text-foreground/60 w-full"
               />
               <Button 
                 type="submit" 
@@ -97,7 +84,7 @@ export const Hero = () => {
             </div>
             <Button 
               size="lg" 
-              className="bg-secondary hover:bg-secondary/90 text-base md:text-lg w-full"
+              className="bg-primary hover:bg-primary/90 text-base md:text-lg w-full"
               onClick={() => window.location.href = "https://calendar.app.google/9v1Kwgse5ESVHRMC8"}
             >
               Book a Demo

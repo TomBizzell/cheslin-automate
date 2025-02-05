@@ -19,9 +19,9 @@ export default {
     },
     extend: {
       borderRadius: {
-        lg: "1rem",     // Increased from 0.75rem
-        md: "0.75rem",  // Increased from 0.5rem
-        sm: "0.5rem",   // Increased from 0.25rem
+        lg: "1rem",
+        md: "0.75rem",
+        sm: "0.5rem",
       },
       colors: {
         border: "hsl(var(--border))",
@@ -30,11 +30,11 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#2E4756", // Dark blue for primary actions
+          DEFAULT: "#0EA5E9", // Ocean Blue for primary actions
           foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#3C7A89", // Lighter blue for secondary elements
+          DEFAULT: "#8B5CF6", // Vivid Purple for secondary elements
           foreground: "#FFFFFF",
         },
         destructive: {
@@ -42,11 +42,11 @@ export default {
           foreground: "hsl(var(--destructive-foreground))",
         },
         muted: {
-          DEFAULT: "#BABD8D", // Light sage for muted backgrounds
-          foreground: "#2E4756",
+          DEFAULT: "#F1F0FB", // Soft Gray for muted backgrounds
+          foreground: "#1A1F2C", // Dark Purple for text
         },
         accent: {
-          DEFAULT: "#7C6A0A", // Olive green for accents
+          DEFAULT: "#6E59A5", // Tertiary Purple for accents
           foreground: "#FFFFFF",
         },
       },
