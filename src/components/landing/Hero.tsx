@@ -51,7 +51,7 @@ export const Hero = () => {
     <section className="min-h-screen flex items-center justify-center relative px-4 py-12 md:py-0 bg-gradient-to-b from-background to-muted">
       <div className="relative z-10 max-w-6xl mx-auto text-center">
         <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 animate-fade-up px-4 text-foreground">
-          Let Cheslin transform your real estate rental strategy
+          Let Cheslin Transform Your Real Estate Rental Strategy
         </h1>
         <p className="text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 text-foreground/80 max-w-3xl mx-auto animate-fade-up px-4">
           Automate outbound calls, streamline call-out lists, and book more viewings effortlessly with lifelike AI
