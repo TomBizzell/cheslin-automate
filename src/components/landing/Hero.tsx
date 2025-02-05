@@ -48,7 +48,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative">
+    <section className="min-h-screen flex items-center justify-center relative px-4 py-12 md:py-0">
       {/* Background image */}
       <div 
         className="absolute inset-0 z-0"
@@ -61,43 +61,43 @@ export const Hero = () => {
       />
       
       {/* Content overlay */}
-      <div className="relative z-10 max-w-6xl mx-auto text-center text-white px-4">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-up">
+      <div className="relative z-10 max-w-6xl mx-auto text-center text-white">
+        <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 animate-fade-up px-4">
           Let Cheslin transform your real estate rental strategy
         </h1>
-        <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto animate-fade-up">
+        <p className="text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 text-white/90 max-w-3xl mx-auto animate-fade-up px-4">
           Automate outbound calls, streamline call-out lists, and book more viewings effortlessly with lifelike AI
         </p>
-        <div className="flex flex-col items-center gap-4 mb-8 animate-fade-up">
-          <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg border border-white/20 w-96">
-            <p className="text-xl font-bold text-white">No missed calls</p>
+        <div className="flex flex-col items-center gap-4 mb-8 animate-fade-up px-4">
+          <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg border border-white/20 w-full md:w-96">
+            <p className="text-lg md:text-xl font-bold text-white">No missed calls</p>
           </div>
-          <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg border border-white/20 w-96">
-            <p className="text-xl font-bold text-white">More buyers engaged</p>
+          <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg border border-white/20 w-full md:w-96">
+            <p className="text-lg md:text-xl font-bold text-white">More buyers engaged</p>
           </div>
           
           {/* Waitlist Form */}
-          <form onSubmit={handleWaitlistSubmit} className="w-full flex flex-col items-center space-y-4 animate-fade-up">
-            <div className="flex items-center gap-2 w-96">
+          <form onSubmit={handleWaitlistSubmit} className="w-full max-w-[384px] flex flex-col items-center space-y-4 animate-fade-up">
+            <div className="flex flex-col md:flex-row items-center gap-2 w-full">
               <Input
                 type="email"
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="bg-white/10 backdrop-blur-sm border-white/20 text-white placeholder:text-white/60 flex-1"
+                className="bg-white/10 backdrop-blur-sm border-white/20 text-white placeholder:text-white/60 w-full"
               />
               <Button 
                 type="submit" 
                 disabled={isLoading}
                 size="lg"
-                className="bg-secondary hover:bg-secondary/90 text-lg whitespace-nowrap"
+                className="bg-secondary hover:bg-secondary/90 text-base md:text-lg whitespace-nowrap w-full md:w-auto"
               >
                 {isLoading ? "Joining..." : "Join Waitlist"}
               </Button>
             </div>
             <Button 
               size="lg" 
-              className="bg-secondary hover:bg-secondary/90 text-lg w-96"
+              className="bg-secondary hover:bg-secondary/90 text-base md:text-lg w-full"
               onClick={() => window.location.href = "https://calendar.app.google/9v1Kwgse5ESVHRMC8"}
             >
               Book a Demo
