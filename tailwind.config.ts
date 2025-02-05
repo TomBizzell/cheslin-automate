@@ -19,8 +19,8 @@ export default {
     },
     extend: {
       borderRadius: {
-        lg: "1rem",
-        md: "0.75rem",
+        lg: "0.5rem",
+        md: "0.5rem",
         sm: "0.5rem",
       },
       colors: {
