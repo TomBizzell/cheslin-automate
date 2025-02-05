@@ -51,6 +51,14 @@ export const Features = () => {
 
     setIsLoading(true);
     try {
+      // First save the phone number to the database
+      const { error: dbError } = await supabase
+        .from('phone_numbers')
+        .insert([{ phone_number: phoneNumber }]);
+
+      if (dbError) throw dbError;
+
+      // Then initiate the call
       const { data, error } = await supabase.functions.invoke('initiate-call', {
         body: { 
           phone_number: phoneNumber,
@@ -65,11 +73,11 @@ export const Features = () => {
         description: "You will receive a call from Cheslin shortly.",
       });
     } catch (error) {
-      console.error('Error initiating call:', error);
+      console.error('Error:', error);
       toast({
         variant: "destructive",
-        title: "Failed to initiate call",
-        description: "There was an error initiating your call. Please try again.",
+        title: "Failed to process request",
+        description: "There was an error processing your request. Please try again.",
       });
     } finally {
       setIsLoading(false);
