@@ -69,39 +69,39 @@ export const Hero = () => {
           Automate outbound calls, streamline call-out lists, and book more viewings effortlessly with lifelike AI
         </p>
         <div className="flex flex-col items-center gap-4 mb-8 animate-fade-up">
-          <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg border border-white/20 w-64">
+          <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg border border-white/20 w-96">
             <p className="text-xl font-bold text-white">No missed calls</p>
           </div>
-          <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg border border-white/20 w-64">
+          <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg border border-white/20 w-96">
             <p className="text-xl font-bold text-white">More buyers engaged</p>
           </div>
           
           {/* Waitlist Form */}
           <form onSubmit={handleWaitlistSubmit} className="w-full flex flex-col items-center space-y-4 animate-fade-up">
-            <Input
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="bg-white/10 backdrop-blur-sm border-white/20 text-white placeholder:text-white/60 w-64"
-            />
-            <div className="flex gap-2 w-64">
+            <div className="flex items-center gap-2 w-96">
+              <Input
+                type="email"
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="bg-white/10 backdrop-blur-sm border-white/20 text-white placeholder:text-white/60 flex-1"
+              />
               <Button 
                 type="submit" 
                 disabled={isLoading}
                 size="lg"
-                className="bg-secondary hover:bg-secondary/90 text-lg flex-1"
+                className="bg-secondary hover:bg-secondary/90 text-lg whitespace-nowrap"
               >
                 {isLoading ? "Joining..." : "Join Waitlist"}
               </Button>
-              <Button 
-                size="lg" 
-                className="bg-secondary hover:bg-secondary/90 text-lg flex-1"
-                onClick={() => window.location.href = "https://calendar.app.google/9v1Kwgse5ESVHRMC8"}
-              >
-                Book a Demo
-              </Button>
             </div>
+            <Button 
+              size="lg" 
+              className="bg-secondary hover:bg-secondary/90 text-lg w-96"
+              onClick={() => window.location.href = "https://calendar.app.google/9v1Kwgse5ESVHRMC8"}
+            >
+              Book a Demo
+            </Button>
           </form>
         </div>
       </div>
