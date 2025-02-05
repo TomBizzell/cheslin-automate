@@ -30,11 +30,11 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#0a21a6", // New deep blue for primary actions
+          DEFAULT: "#0a21a6", // Deep blue for primary actions
           foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#8B5CF6", // Vivid Purple for secondary elements
+          DEFAULT: "#fa7602", // New orange for secondary elements
           foreground: "#FFFFFF",
         },
         destructive: {
@@ -46,7 +46,7 @@ export default {
           foreground: "#1A1F2C", // Dark Purple for text
         },
         accent: {
-          DEFAULT: "#6E59A5", // Tertiary Purple for accents
+          DEFAULT: "#fa7602", // Updated accent color to match secondary
           foreground: "#FFFFFF",
         },
       },
