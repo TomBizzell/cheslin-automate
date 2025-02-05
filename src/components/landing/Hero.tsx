@@ -77,29 +77,32 @@ export const Hero = () => {
           </div>
           
           {/* Waitlist Form */}
-          <form onSubmit={handleWaitlistSubmit} className="w-full max-w-md space-y-4 animate-fade-up">
-            <div className="flex gap-2">
+          <form onSubmit={handleWaitlistSubmit} className="w-full max-w-2xl space-y-4 animate-fade-up">
+            <div className="flex gap-4 justify-center">
               <Input
                 type="email"
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="bg-white/10 backdrop-blur-sm border-white/20 text-white placeholder:text-white/60"
+                className="bg-white/10 backdrop-blur-sm border-white/20 text-white placeholder:text-white/60 max-w-md"
               />
-              <Button 
-                type="submit" 
-                disabled={isLoading}
-                className="bg-secondary hover:bg-secondary/90 whitespace-nowrap"
-              >
-                {isLoading ? "Joining..." : "Join Waitlist"}
-              </Button>
-              <Button 
-                size="lg" 
-                className="bg-secondary hover:bg-secondary/90 text-lg whitespace-nowrap"
-                onClick={() => window.location.href = "https://calendar.app.google/9v1Kwgse5ESVHRMC8"}
-              >
-                Book a Demo
-              </Button>
+              <div className="flex gap-4">
+                <Button 
+                  type="submit" 
+                  disabled={isLoading}
+                  size="lg"
+                  className="bg-secondary hover:bg-secondary/90 text-lg px-8"
+                >
+                  {isLoading ? "Joining..." : "Join Waitlist"}
+                </Button>
+                <Button 
+                  size="lg" 
+                  className="bg-secondary hover:bg-secondary/90 text-lg px-8"
+                  onClick={() => window.location.href = "https://calendar.app.google/9v1Kwgse5ESVHRMC8"}
+                >
+                  Book a Demo
+                </Button>
+              </div>
             </div>
           </form>
         </div>
