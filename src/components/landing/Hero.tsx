@@ -62,15 +62,6 @@ export const Hero = () => {
       
       {/* Content overlay */}
       <div className="relative z-10 max-w-6xl mx-auto text-center text-white">
-        {/* Logo */}
-        <div className="mb-8 animate-fade-up">
-          <img 
-            src="/lovable-uploads/fc364fa8-5870-4ecb-8bee-b55de5a8ff8f.png" 
-            alt="Cheslin Logo" 
-            className="h-16 md:h-20 mx-auto"
-          />
-        </div>
-
         <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 animate-fade-up px-4">
           Let Cheslin transform your real estate rental strategy
         </h1>
