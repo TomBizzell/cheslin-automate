@@ -85,18 +85,18 @@ export const Hero = () => {
               onChange={(e) => setEmail(e.target.value)}
               className="bg-white/10 backdrop-blur-sm border-white/20 text-white placeholder:text-white/60 w-64"
             />
-            <div className="flex justify-center gap-4 flex-wrap">
+            <div className="flex gap-2 w-64">
               <Button 
                 type="submit" 
                 disabled={isLoading}
                 size="lg"
-                className="bg-secondary hover:bg-secondary/90 text-lg px-8 min-w-[200px]"
+                className="bg-secondary hover:bg-secondary/90 text-lg flex-1"
               >
                 {isLoading ? "Joining..." : "Join Waitlist"}
               </Button>
               <Button 
                 size="lg" 
-                className="bg-secondary hover:bg-secondary/90 text-lg px-8 min-w-[200px]"
+                className="bg-secondary hover:bg-secondary/90 text-lg flex-1"
                 onClick={() => window.location.href = "https://calendar.app.google/9v1Kwgse5ESVHRMC8"}
               >
                 Book a Demo
