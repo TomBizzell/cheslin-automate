@@ -88,11 +88,11 @@ export const Features = () => {
   return (
     <section className="py-24 bg-[#E2E2E2] px-4">
       <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col items-center justify-center gap-2 mb-8">
+        <div className="flex flex-col items-center justify-center mb-8">
           <img 
             src="/lovable-uploads/9a453499-6e3a-402f-8e51-69ecc0da358a.png" 
             alt="EF Hackathon Winner Badge" 
-            className="h-36 mb-1"
+            className="h-44 -mb-2"
           />
           <p className="text-lg font-semibold text-primary text-center">Winning team of the EF Hackathon</p>
         </div>
