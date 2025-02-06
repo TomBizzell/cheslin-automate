@@ -51,17 +51,31 @@ export const Hero = () => {
     <section className="min-h-screen flex items-center justify-center relative px-4 py-12 md:py-0 bg-[#ffffff]">
       <div className="relative z-10 max-w-6xl mx-auto text-center">
         <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 animate-fade-up px-4 text-foreground">
-          Let Cheslin Transform Your Real Estate Rental Strategy
+          <span className="text-primary">AI For Real Estate Agencies</span> That{" "}
+          <span className="text-secondary">Makes Calls</span> While{" "}
+          <span className="text-primary">You Build Relationships</span>.
         </h1>
         <p className="text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 text-foreground/80 max-w-3xl mx-auto animate-fade-up px-4">
           Automate outbound calls, streamline call-out lists, and book more viewings effortlessly with lifelike AI
         </p>
+        
+        <div className="mb-16">
+          <div style={{ position: 'relative', paddingBottom: '62.5%', height: 0 }}>
+            <iframe 
+              src="https://www.loom.com/embed/f5bf8ceadd014a099dddc13e24607ec2?sid=d22b4e52-bc56-4bc1-9e5e-a3a8d286781b" 
+              frameBorder="0" 
+              allowFullScreen 
+              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+            />
+          </div>
+        </div>
+
         <div className="flex flex-col items-center gap-4 mb-8 animate-fade-up px-4">
           <div className="bg-primary/5 backdrop-blur-sm px-6 py-3 rounded-lg border border-primary/10 w-full md:w-96">
-            <p className="text-lg md:text-xl font-bold text-primary">No missed calls</p>
+            <p className="text-lg md:text-xl font-bold text-primary">No Missed Calls</p>
           </div>
           <div className="bg-primary/5 backdrop-blur-sm px-6 py-3 rounded-lg border border-primary/10 w-full md:w-96">
-            <p className="text-lg md:text-xl font-bold text-primary">More buyers engaged</p>
+            <p className="text-lg md:text-xl font-bold text-primary">More Buyers Engaged</p>
           </div>
           
           <form onSubmit={handleWaitlistSubmit} className="w-full max-w-[384px] flex flex-col items-center space-y-4 animate-fade-up">
