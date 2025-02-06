@@ -94,7 +94,7 @@ export const Features = () => {
             alt="EF Hackathon Winner Badge" 
             className="h-44"
           />
-          <p className="text-lg font-semibold text-primary text-center mt-auto mb-auto">Backed by EF</p>
+          <p className="text-lg font-semibold text-primary text-center -mt-[3.75rem] mb-auto">Backed by EF</p>
         </div>
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-accent">
           Your AI Assistant for Real Estate Rentals
