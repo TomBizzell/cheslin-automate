@@ -104,6 +104,15 @@ export const Hero = () => {
               Book a Demo
             </Button>
           </form>
+          
+          <div className="flex items-center justify-center gap-4 mt-8 animate-fade-up">
+            <p className="text-lg font-medium text-foreground/60">Backed by</p>
+            <img 
+              src="/lovable-uploads/9a453499-6e3a-402f-8e51-69ecc0da358a.png" 
+              alt="Entrepreneur First Logo" 
+              className="h-10"
+            />
+          </div>
         </div>
       </div>
     </section>
