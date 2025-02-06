@@ -62,9 +62,9 @@ const Landing = () => {
     <div className="min-h-screen flex flex-col items-center justify-center px-4 bg-background">
       <div className="max-w-2xl mx-auto text-center space-y-8">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
-          <span className="text-primary">AI for Real Estate Agencies</span> that{" "}
-          <span className="text-secondary">makes calls</span> while{" "}
-          <span className="text-primary">you build relationships</span>.
+          <span className="text-primary">AI For Real Estate Agencies</span> That{" "}
+          <span className="text-secondary">Makes Calls</span> While{" "}
+          <span className="text-primary">You Build Relationships</span>.
         </h1>
         <p className="text-xl text-muted-foreground mb-8 animate-fade-up">Try it out:</p>
         
