@@ -109,7 +109,7 @@ const Landing = () => {
               alt="Entrepreneur First Logo" 
               className="h-40 w-auto mx-auto -mt-12"
             />
-            <p className="text-xl font-medium text-muted-foreground absolute top-1/3 left-1/2 -translate-x-1/2 bg-background/80 px-4 py-2 rounded-full backdrop-blur-sm">
+            <p className="text-xl font-medium text-muted-foreground absolute top-1/6 left-1/2 -translate-x-1/2 bg-background/80 px-4 py-2 rounded-full backdrop-blur-sm">
               Backed by
             </p>
           </div>
