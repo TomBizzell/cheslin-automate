@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -34,7 +35,7 @@ export default {
           foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#fa7602", // New orange for secondary elements
+          DEFAULT: "#7BB135", // New green color replacing orange
           foreground: "#FFFFFF",
         },
         destructive: {
@@ -46,7 +47,7 @@ export default {
           foreground: "#1A1F2C", // Dark Purple for text
         },
         accent: {
-          DEFAULT: "#fa7602", // Updated accent color to match secondary
+          DEFAULT: "#7BB135", // Updated accent color to match secondary
           foreground: "#FFFFFF",
         },
       },
