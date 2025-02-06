@@ -88,13 +88,13 @@ export const Features = () => {
   return (
     <section className="pt-12 pb-24 bg-[#E2E2E2] px-4">
       <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col items-center justify-center mb-15">
+        <div className="flex flex-col items-center h-64 mb-15">
           <img 
             src="/lovable-uploads/9a453499-6e3a-402f-8e51-69ecc0da358a.png" 
             alt="EF Hackathon Winner Badge" 
-            className="h-44 -mb-10"
+            className="h-44"
           />
-          <p className="text-lg font-semibold text-primary text-center">Backed by EF</p>
+          <p className="text-lg font-semibold text-primary text-center mt-auto mb-auto">Backed by EF</p>
         </div>
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-accent">
           Your AI Assistant for Real Estate Rentals
