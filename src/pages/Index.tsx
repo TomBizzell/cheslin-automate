@@ -3,10 +3,12 @@ import { Features } from "@/components/landing/Features";
 import { Dashboard } from "@/components/landing/Dashboard";
 import { Campaign } from "@/components/landing/Campaign";
 import { CTA } from "@/components/landing/CTA";
+import Logo from "@/components/Logo";
 
 const Index = () => {
   return (
-    <div className="overflow-x-hidden">
+    <div className="relative">
+      <Logo />
       <Hero />
       <Features />
       <Dashboard />
