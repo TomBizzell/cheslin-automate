@@ -86,9 +86,9 @@ export const Features = () => {
   };
 
   return (
-    <section className="py-24 bg-[#E2E2E2] px-4">
+    <section className="pt-12 pb-24 bg-[#E2E2E2] px-4">
       <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col items-center justify-center mb-8">
+        <div className="flex flex-col items-center justify-center mb-15">
           <img 
             src="/lovable-uploads/9a453499-6e3a-402f-8e51-69ecc0da358a.png" 
             alt="EF Hackathon Winner Badge" 
