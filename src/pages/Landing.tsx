@@ -104,14 +104,14 @@ const Landing = () => {
           </div>
           
           <div className="relative mt-16">
+            <p className="text-xl font-medium text-muted-foreground relative z-10 mb-[-3rem] bg-background/80 px-4 py-2 rounded-full backdrop-blur-sm inline-block">
+              Backed by
+            </p>
             <img 
               src="/lovable-uploads/9a453499-6e3a-402f-8e51-69ecc0da358a.png" 
               alt="Entrepreneur First Logo" 
               className="h-40 w-auto mx-auto -mt-12"
             />
-            <p className="text-xl font-medium text-muted-foreground absolute top-1/6 left-1/2 -translate-x-1/2 bg-background/80 px-4 py-2 rounded-full backdrop-blur-sm">
-              Backed by
-            </p>
           </div>
         </div>
       </div>
