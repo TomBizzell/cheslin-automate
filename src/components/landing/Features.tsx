@@ -92,9 +92,9 @@ export const Features = () => {
           <img 
             src="/lovable-uploads/9a453499-6e3a-402f-8e51-69ecc0da358a.png" 
             alt="EF Hackathon Winner Badge" 
-            className="h-44 -mb-6"
+            className="h-44 -mb-10"
           />
-          <p className="text-lg font-semibold text-primary text-center">Winning team of the EF Hackathon</p>
+          <p className="text-lg font-semibold text-primary text-center">Backed by EF</p>
         </div>
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-accent">
           Your AI Assistant for Real Estate Rentals
