@@ -88,6 +88,14 @@ export const Features = () => {
   return (
     <section className="py-24 bg-[#E2E2E2] px-4">
       <div className="max-w-6xl mx-auto">
+        <div className="flex items-center justify-center gap-4 mb-8">
+          <img 
+            src="/lovable-uploads/9a453499-6e3a-402f-8e51-69ecc0da358a.png" 
+            alt="EF Hackathon Winner Badge" 
+            className="h-8"
+          />
+          <p className="text-lg font-semibold text-primary">Winning team of the EF Hackathon</p>
+        </div>
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-accent">
           Your AI Assistant for Real Estate Rentals
         </h2>
