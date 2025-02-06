@@ -80,7 +80,7 @@ const Landing = () => {
             onClick={handleCallRequest}
             disabled={isLoading}
           >
-            {isLoading ? "Initiating call..." : "Receive a call from Cheslin"}
+            {isLoading ? "Initiating call..." : "Receive a call from Cheslin, our AI"}
           </Button>
           <Button 
             variant="secondary"
