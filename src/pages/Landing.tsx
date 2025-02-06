@@ -103,12 +103,12 @@ const Landing = () => {
             </div>
           </div>
           
-          <div className="flex items-center justify-center gap-4 mt-8">
-            <p className="text-lg font-medium text-muted-foreground">Backed by</p>
+          <div className="flex flex-col items-center gap-6 mt-8">
+            <p className="text-xl font-medium text-muted-foreground">Backed by</p>
             <img 
               src="/lovable-uploads/9a453499-6e3a-402f-8e51-69ecc0da358a.png" 
               alt="Entrepreneur First Logo" 
-              className="h-10"
+              className="h-20 w-auto"
             />
           </div>
         </div>
