@@ -92,7 +92,7 @@ export const Features = () => {
           <img 
             src="/lovable-uploads/9a453499-6e3a-402f-8e51-69ecc0da358a.png" 
             alt="EF Hackathon Winner Badge" 
-            className="h-44 -mb-2"
+            className="h-44 -mb-6"
           />
           <p className="text-lg font-semibold text-primary text-center">Winning team of the EF Hackathon</p>
         </div>
