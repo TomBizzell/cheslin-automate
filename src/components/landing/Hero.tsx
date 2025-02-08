@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
@@ -62,7 +63,7 @@ export const Hero = () => {
         <div className="mb-16">
           <div style={{ position: 'relative', paddingBottom: '62.5%', height: 0 }}>
             <iframe 
-              src="https://www.loom.com/embed/f5bf8ceadd014a099dddc13e24607ec2?sid=d22b4e52-bc56-4bc1-9e5e-a3a8d286781b" 
+              src="https://www.loom.com/share/7f46bb9b29b24356a30fda771b1c41f4?sid=5614c3f8-f308-413b-9b7f-de68e88cbf18" 
               frameBorder="0" 
               allowFullScreen 
               style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
