@@ -6,7 +6,7 @@ export const Dashboard = () => {
         <div className="mb-16">
           <div style={{ position: 'relative', paddingBottom: '62.5%', height: 0 }}>
             <iframe 
-              src="https://www.loom.com/share/7f46bb9b29b24356a30fda771b1c41f4?sid=5614c3f8-f308-413b-9b7f-de68e88cbf18" 
+              src="https://www.loom.com/embed/7f46bb9b29b24356a30fda771b1c41f4?sid=aeb518ad-79b5-440b-8976-91ad0d8b6b34" 
               frameBorder="0" 
               allowFullScreen 
               style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
