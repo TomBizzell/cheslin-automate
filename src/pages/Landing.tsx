@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Input } from "@/components/ui/input";
@@ -95,7 +96,7 @@ const Landing = () => {
           <div className="rounded-lg overflow-hidden shadow-lg mb-8">
             <div style={{ position: 'relative', paddingBottom: '62.5%', height: 0 }}>
               <iframe 
-                src="https://www.loom.com/embed/7f46bb9b29b24356a30fda771b1c41f4?sid=aeb518ad-79b5-440b-8976-91ad0d8b6b34" 
+                src="https://www.loom.com/embed/cf3b84ee0a5f48e5be80829c67e9b8c7?sid=2883f92b-ef1b-4790-8617-e456418ee36c" 
                 frameBorder="0" 
                 allowFullScreen 
                 style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
